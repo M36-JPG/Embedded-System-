@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-/* تعريف Registers (Simulation) */
-unsigned int GPIO_DIR = 0;   // اتجاه البورت (0 = Input, 1 = Output)
-unsigned int GPIO_DATA = 0;  // البيانات
+/* Define Registers (Simulation) */
+unsigned int GPIO_DIR = 0;   // Port direction  (0 = Input, 1 = Output)
+unsigned int GPIO_DATA = 0;  // Data 
 
-/* تعريف الماكروز */
+/* Macro definitions */
 #define SET_BIT(REG, BIT)   (REG |= (1 << BIT))
 #define CLR_BIT(REG, BIT)   (REG &= ~(1 << BIT))
 #define READ_BIT(REG, BIT)  ((REG >> BIT) & 1)
@@ -33,7 +33,7 @@ int GPIO_Read(int pin)
     return READ_BIT(GPIO_DATA, pin);
 }
 
-/* Main للتجربة */
+/* Main Trying  */
 int main()
 {
     GPIO_Init(2, 1);     // Pin 2 Output
