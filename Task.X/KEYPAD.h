@@ -8,7 +8,7 @@
 #define KEYPAD_Port_Dir 0xF0 // half input , half output
 #define KEYPAD_Port GPIO_PORTD
 //Calculator keypad array
-#define KEYPAD_Arr { {7,8,9,'/'} , {4,5,6,'×'} , {1,2,3,'-'}, {'C',0,'=','+'}}
+#define KEYPAD_Arr { {'7','8','9','/'} , {'4','5','6','Ã—'} , {'1','2','3','-'}, {'C','0','=','+'}}
 
 #define KEYPAD_ROW1 GPIO_PIN0
 #define KEYPAD_ROW2 GPIO_PIN1
