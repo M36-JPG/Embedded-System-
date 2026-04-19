@@ -2,7 +2,7 @@
 #define LCD_H
 
 #include "STD_TYPES.h"
-#include "BIT_MATH.H"
+#include "BIT_MATH.h"
 #include "GPIO_INTERFACING.h"
 #include <stdio.h>
 
@@ -29,6 +29,6 @@ void LCD_VidSendChar(u8 data);
 void LCD_VidSendString(const char* str);
 void LCD_VidSetCursor(u8 row , u8 col);
 void LCD_VidClear(void);
-void LCD_VidSendNumber(u8 num);
+void LCD_VidSendNumber(int num);
 
 #endif
