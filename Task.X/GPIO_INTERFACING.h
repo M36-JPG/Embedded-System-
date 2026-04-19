@@ -30,7 +30,7 @@
 
 void GPIO_VidSetPinDir(u8 port , u8 pin , u8 dir);
 void GPIO_VidSetPinValue(u8 port , u8 pin , u8 value);
-void GPIO_VidTogglePin(u8 port , u8 pin);
+void GPIO_VidTogglePinValue(u8 port , u8 pin);
 
 void GPIO_VidSetPortDir(u8 port , u8 dir);
 void GPIO_VidSetPortValue(u8 port , u8 value);
