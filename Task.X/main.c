@@ -8,7 +8,7 @@
 
 #include <xc.h>
 #include "LCD.h"
-#include "KeyPad.h"
+#include "KEYPAD.h"
 #include <stdio.h>
 int main(void){
     LCD_VidInit();
