@@ -5,7 +5,7 @@
  * Created on April 18, 2026, 5:02 PM
  */
 
-
+#include <xc.h>
 #include <avr/io.h>
 #include <util/delay.h>
 #include "LCD.h"
@@ -63,7 +63,7 @@ void LCD_VidClear(void){
     _delay_ms(5);
 }
 
-void LCD_VidSendNumber(u8 num)
+void LCD_VidSendNumber(int num)
 {
     u8 temp[16];         
     sprintf(temp, "%d", num); 
