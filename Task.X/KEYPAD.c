@@ -38,7 +38,7 @@ u8 KEYPAD_U8GetPressedKey(void){
             _delay_ms(10);
         }
            GPIO_VidSetPinValue(KEYPAD_Port , KEYPAD_COL_ARR[i],GPIO_HIGH);
-           return loc_PressedKey;
+          // return loc_PressedKey;
        }
           GPIO_VidSetPinValue(KEYPAD_Port , KEYPAD_COL_ARR[i],GPIO_HIGH);
     }
