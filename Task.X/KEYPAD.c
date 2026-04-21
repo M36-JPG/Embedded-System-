@@ -36,9 +36,9 @@ u8 KEYPAD_U8GetPressedKey(void){
                 loc_PinValue = GPIO_U8GetPinValue(KEYPAD_Port , KEYPAD_ROW_ARR[j]);
             }
             _delay_ms(10);
-        }
            GPIO_VidSetPinValue(KEYPAD_Port , KEYPAD_COL_ARR[i],GPIO_HIGH);
-          // return loc_PressedKey;
+           return loc_PressedKey;
+        }
        }
           GPIO_VidSetPinValue(KEYPAD_Port , KEYPAD_COL_ARR[i],GPIO_HIGH);
     }
@@ -81,7 +81,7 @@ u8 KEYPAD_GetOperator(void)
         else{
             key = KEYPAD_U8GetPressedKey();
         }
-        key = KEYPAD_U8GetPressedKey();   
+         
 
         if(key == '+' || key == '-' || key == '*' || key == '/')
         {
@@ -90,3 +90,32 @@ u8 KEYPAD_GetOperator(void)
         }
     }
 }
+
+u8 KEYPAD_GetNumberWithTerminator(u8 *terminator)
+{
+    u8 number = 0;
+    u8 key;
+
+    while(1)
+    {
+        key = KEYPAD_U8GetPressedKey();
+        if(key == 0xFF){
+            continue;
+        }
+
+        if(key >= '0' && key <= '9')
+        {
+            LCD_VidSendChar(key);
+            number = ( number * 10u ) + (key - '0');
+        }
+        else
+        {
+            g_pendingKey = key;
+            if(terminator != ((void*)0)){
+                *terminator = key;
+            }
+            return number;
+        }
+    }
+}
+

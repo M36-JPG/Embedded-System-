@@ -11,7 +11,7 @@
 #include "LCD.h"
 static void LCD_EnablePulse(void){
     GPIO_VidSetPinValue(LCD_CONTROL_PORT , LCD_E_PIN , GPIO_HIGH);
-    _delay_ms(5);
+    _delay_ms(2);
     GPIO_VidSetPinValue(LCD_CONTROL_PORT , LCD_E_PIN , GPIO_LOW);
 }
 
@@ -21,7 +21,7 @@ void LCD_VidInit(void){
     GPIO_VidSetPinDir(LCD_CONTROL_PORT, LCD_RW_PIN , GPIO_OUTPUT);
     GPIO_VidSetPinDir(LCD_CONTROL_PORT, LCD_E_PIN , GPIO_OUTPUT);
 
-    _delay_ms(60);
+    _delay_ms(40);
     LCD_VidSendCommand(LCD_8BIT_MODE); // Using 8 data bus , meaning 1 cycle
     LCD_VidSendCommand(LCD_DIS_ON); //Without cursor 
     //LCD_VidSendCommand(LCD_Dis_ON); // With cursor
@@ -60,7 +60,7 @@ void LCD_VidSetCursor(u8 row , u8 col){ // for specfic location
 
 void LCD_VidClear(void){
     LCD_VidSendCommand(LCD_CLR_DIS);
-    _delay_ms(5);
+    _delay_ms(2);
 }
 
 void LCD_VidSendNumber(int num)

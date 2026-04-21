@@ -15,8 +15,8 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\fuse.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\lock.h \
  c:\program\ files\microchip\xc8\v3.10\avr\avr\include\avr\builtins.h \
- LCD.h STD_TYPES.h BIT_MATH.H GPIO_INTERFACING.h BIT_MATH.h GPIO_REG.h \
- c:\program\ files\microchip\xc8\v3.10\avr\avr\include\stdio.h KeyPad.h
+ LCD.h STD_TYPES.h BIT_MATH.h GPIO_INTERFACING.h GPIO_REG.h \
+ c:\program\ files\microchip\xc8\v3.10\avr\avr\include\stdio.h KEYPAD.h
 
 c:\program\ files\microchip\xc8\v3.10\avr\lib\gcc\avr\5.4.0\include\xc.h:
 
@@ -54,14 +54,12 @@ LCD.h:
 
 STD_TYPES.h:
 
-BIT_MATH.H:
+BIT_MATH.h:
 
 GPIO_INTERFACING.h:
-
-BIT_MATH.h:
 
 GPIO_REG.h:
 
 c:\program\ files\microchip\xc8\v3.10\avr\avr\include\stdio.h:
 
-KeyPad.h:
+KEYPAD.h:
