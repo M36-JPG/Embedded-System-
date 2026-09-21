@@ -9,8 +9,8 @@
 #ifndef UART_H_
 #define UART_H_
 
-#include"STD_TYPES.h"
-#include"BIT_MATH.h"
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
 
 void UART_Init(void);
 
