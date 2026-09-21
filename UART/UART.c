@@ -5,8 +5,8 @@
  *  Author: user
  */ 
 
-#include<avr/io.h>
-#include"USART.h"
+#include <avr/io.h>
+#include "USART.h"
 
 #define F_CPU 1600000UL
 
